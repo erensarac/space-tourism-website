@@ -20,23 +20,23 @@
     }
 
     .text-preset-5 {
-        @apply font-barlow-condensed font-normal xs:text-2xl md:text-4xl xs:tracking-['15%'] md:tracking-['4px'] leading-none
+        @apply font-barlow-condensed font-normal xs:text-2xl md:text-4xl xs:tracking-[15%] md:tracking-[4px] leading-none
     }
 
     .text-preset-6 {
-        @apply font-bellafair font-normal text-base md:text-4xl tracking-['15%'] xs:tracking-normal leading-none
+        @apply font-bellafair font-normal text-base md:text-4xl tracking-[15%] xs:tracking-normal leading-none
     }
 
     .text-preset-7 {
-        @apply font-barlow-condensed font-normal md:text-xs tracking-['2px'] leading-none
+        @apply font-barlow-condensed font-normal md:text-xs tracking-[2px] leading-none
     }
 
     .text-preset-8 {
-        @apply font-barlow-condensed font-normal text-xs md:text-base tracking-['15%'] xs:tracking-['2px'] leading-none
+        @apply font-barlow-condensed font-normal text-base tracking-[15%] xs:tracking-[2px] leading-none
     }
 
     .text-preset-8-bold {
-        @apply font-barlow-condensed font-bold md:text-base tracking-['2.7px'] leading-none
+        @apply font-barlow-condensed font-bold text-base tracking-['2.7px'] leading-none
     }
 
     .text-preset-9 {

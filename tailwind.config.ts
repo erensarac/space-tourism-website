@@ -13,6 +13,8 @@ const config: Config = {
       "white": "#FFFFFF",
     },
     spacing: {
+      "unset": "unset",
+      "0": "0",
       "25": "2px",
       "50": "4px",
       "100": "8px",
