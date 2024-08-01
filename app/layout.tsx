@@ -1,0 +1,38 @@
+import "./globals.css";
+import type { Metadata } from "next";
+import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
+
+const bellafair = Bellefair({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bellafair"
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-barlow",
+})
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-barlow-condensed"
+})
+
+export const metadata: Metadata = {
+  title: "Space Tourism",
+  description: "Space Toursim Website",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${bellafair.variable} ${barlow.variable} ${barlowCondensed.variable}`}>{children}</body>
+    </html>
+  );
+}
