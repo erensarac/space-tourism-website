@@ -32,7 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bellafair.variable} ${barlow.variable} ${barlowCondensed.variable}`}>{children}</body>
+      <body
+        className={`${bellafair.variable} ${barlow.variable} ${barlowCondensed.variable} bg-blue-900 text-white min-h-screen overflow-x-hidden`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
