@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 @layer base {
   .unset {
     @apply bottom-unset end-unset left-unset right-unset top-unset m-unset mx-unset my-unset me-unset ms-unset size-unset h-unset max-h-unset min-h-unset w-unset min-w-unset max-w-unset gap-unset p-unset px-unset py-unset opacity-0;
   }
 
   .text-preset-1 {
-    @apply font-bellafair text-8xl font-normal leading-none tracking-normal md:text-10xl;
+    @apply font-bellafair text-8xl font-normal leading-[5.75rem] sm:leading-none tracking-normal md:text-10xl;
   }
 
   .text-preset-2 {
@@ -24,11 +28,11 @@
   }
 
   .text-preset-5 {
-    @apply font-barlow-condensed font-normal leading-none xs:text-2xl xs:tracking-[15%] md:text-4xl md:tracking-[4px];
+    @apply font-barlow-condensed font-normal leading-none text-base sm:text-2xl xs:tracking-[0.15em] md:text-4xl md:tracking-[4px];
   }
 
   .text-preset-6 {
-    @apply font-bellafair text-base font-normal leading-none tracking-[15%] xs:tracking-normal md:text-4xl;
+    @apply font-bellafair text-base font-normal leading-none tracking-[0.15em] xs:tracking-normal md:text-4xl;
   }
 
   .text-preset-7 {
@@ -50,6 +54,6 @@
   }
 
   .text-preset-9 {
-    @apply font-barlow text-sm font-normal leading-['180%'] tracking-normal xs:text-base md:text-xl;
+    @apply font-barlow text-sm font-normal leading-[180%] tracking-normal sm:text-base md:text-xl;
   }
 }
