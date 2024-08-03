@@ -51,9 +51,32 @@ const config: Config = {
     },
     extend: {
       screens: {
-        "xs": "375px"
-      }
-    }
+        "xs": "375px",
+      },
+      backgroundImage: {
+        "desktop-home": "url('/assets/background-home-desktop.jpg')",
+        "tablet-home": "url('/assets/background-home-tablet.jpg')",
+        "mobile-home": "url('/assets/background-home-mobile.jpg')",
+        "desktop-destination":
+          "url('/assets/destination/background-destination-desktop.jpg')",
+        "tablet-destination":
+          "url('/assets/destination/background-destination-tablet.jpg')",
+        "mobile-destination":
+          "url('/assets/destination/background-destination-mobile.jpg')",
+        "desktop-crew":
+          "url('/assets/crew/background-crew-desktop.jpg')",
+        "tablet-crew":
+          "url('/assets/crew/background-crew-tablet.jpg')",
+        "mobile-crew":
+          "url('/assets/crew/background-crew-mobile.jpg')",
+        "desktop-technology":
+          "url('/assets/technology/background-technology-desktop.jpg')",
+        "tablet-technology":
+          "url('/assets/technology/background-technology-tablet.jpg')",
+        "mobile-technology":
+          "url('/assets/technology/background-technology-mobile.jpg')",
+      },
+    },
   },
   plugins: [],
 };
