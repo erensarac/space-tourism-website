@@ -76,6 +76,12 @@ const config: Config = {
         "mobile-technology":
           "url('/assets/technology/background-technology-mobile.jpg')",
       },
+      boxShadow: {
+        button: '0 4px 40px #00000025'
+      },
+      ringWidth: {
+        button: '88px',
+      }
     },
   },
   plugins: [],
