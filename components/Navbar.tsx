@@ -26,16 +26,16 @@ export default function Navbar() {
    };
    
    return (
-      <header className="flex h-[88px] w-full justify-between md:h-1200 md:justify-normal xl:h-[136px]">
+      <header className="z-30 flex h-[88px] w-full justify-between md:h-1200 md:justify-normal xl:h-[136px]">
          <div className="relative flex items-center justify-start px-300 py-300 md:px-500 md:py-300 xl:w-full xl:pb-300 xl:pl-800 xl:pt-800">
             <Link href="/">
                <Logo />
             </Link>
-            <hr className="absolute -right-400 z-10 hidden h-[1px] w-4/5 border-none bg-white opacity-25 xl:block" />
+            <hr className="absolute -right-400 hidden h-[1px] w-4/5 border-none bg-white opacity-25 xl:block" />
          </div>
          <div className="isolate flex items-center justify-end md:w-full md:justify-center md:bg-white/5 md:backdrop-blur-lg xl:mt-500">
             <div
-               className={`${showMenu ? "transition-transform translate-x-0 bg-[#0B0D17]/15" : "translate-x-full bg-[#0B0D17]/15"} absolute right-0 top-0 z-10 flex h-screen w-full max-w-[15.875rem] flex-col pl-400 backdrop-blur-lg duration-500 ease-in-out md:relative md:right-unset md:top-unset md:z-auto md:block md:h-unset md:w-unset md:max-w-unset md:translate-x-0 md:bg-[#0B0D17]/0 md:p-unset md:opacity-[unset] md:backdrop-blur-none md:transition-none transition-none`}
+               className={`${showMenu ? "transition-transform translate-x-0 bg-[#0B0D17]/15" : "translate-x-full bg-[#0B0D17]/15"} fixed right-0 top-0 z-20 flex h-screen w-full max-w-[15.875rem] flex-col pl-400 backdrop-blur-lg duration-500 ease-in-out md:relative md:right-unset md:top-unset md:z-auto md:block md:h-unset md:w-unset md:max-w-unset md:translate-x-0 md:bg-[#0B0D17]/0 md:p-unset md:opacity-[unset] md:backdrop-blur-none md:transition-none transition-none`}
             >
                <div className="mb-600 flex justify-end py-400 pr-300 md:hidden">
                   <Close

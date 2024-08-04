@@ -30,13 +30,13 @@ export default function Tabs() {
       <div className="flex gap-400">
          {list.map(item => (
             <div key={item.query} className="group flex h-400 relative">
-               <Link className="text-preset-8 uppercase text-blue-300" href={{
+               <Link className="text-preset-8 uppercase text-blue-300" scroll={false} href={{
                   pathname: '/destination',
                   query: { planet: item.query },
                }}>
                   {item.text}
                </Link>
-               <hr className={`${planet === item.query ? 'bg-white' : 'group-hover:bg-white/50 bg-white/0'} absolute left-0 bottom-0 w-full h-[3px] border-none`} />
+               <hr className={`${planet === item.query || (!planet && item.query === 'moon') ? 'bg-white' : 'group-hover:bg-white/50 bg-white/0'} absolute left-0 bottom-0 w-full h-[3px] border-none`} />
             </div>
          ))}
       </div>

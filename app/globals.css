@@ -32,7 +32,7 @@
   }
 
   .text-preset-6 {
-    @apply font-bellafair text-base font-normal leading-none tracking-[0.15em] xs:tracking-normal md:text-4xl;
+    @apply font-bellafair font-normal leading-none tracking-[0.15em] xs:tracking-normal text-4xl;
   }
 
   .text-preset-7 {
