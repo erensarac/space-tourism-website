@@ -7,53 +7,122 @@
 }
 
 @layer base {
-  .unset {
-    @apply bottom-unset end-unset left-unset right-unset top-unset m-unset mx-unset my-unset me-unset ms-unset size-unset h-unset max-h-unset min-h-unset w-unset min-w-unset max-w-unset gap-unset p-unset px-unset py-unset opacity-0;
-  }
-
   .text-preset-1 {
-    @apply font-bellafair text-8xl font-normal leading-[5.75rem] sm:leading-none tracking-normal md:text-10xl;
+    @apply font-bellafair text-11;
+    letter-spacing: 0px;
+    line-height: auto;
   }
 
   .text-preset-2 {
-    @apply font-bellafair text-7xl font-normal leading-none tracking-normal xs:text-8xl md:text-9xl;
+    @apply font-bellafair text-10;
+    letter-spacing: 0px;
+    line-height: auto;
   }
 
   .text-preset-3 {
-    @apply font-bellafair text-3xl font-normal leading-none tracking-normal xs:text-6xl md:text-7xl;
+    @apply font-bellafair text-6;
+    letter-spacing: 0;
+    line-height: auto;
   }
 
   .text-preset-4 {
-    @apply font-bellafair text-xl font-normal leading-none tracking-normal xs:text-3xl md:text-5xl;
-  }
-
-  .text-preset-5 {
-    @apply font-barlow-condensed font-normal leading-none text-base sm:text-2xl xs:tracking-[0.15em] md:text-4xl md:tracking-[4px];
+    @apply font-bellafair text-4;
+    letter-spacing: 0px;
+    line-height: auto;
   }
 
   .text-preset-6 {
-    @apply font-bellafair font-normal leading-none tracking-[0.15em] xs:tracking-normal text-4xl;
-  }
-
-  .text-preset-7 {
-    @apply font-barlow-condensed font-normal leading-none tracking-[2px] md:text-xs;
+    @apply font-barlow-condensed text-3;
+    line-height: auto;
+    letter-spacing: 15%;
   }
 
   .text-preset-8 {
-    @apply font-barlow-condensed text-base font-normal leading-none tracking-[2px];
-    direction: rtl;
-    text-align: justify;
-    text-indent: -0.067em;
-  }
-
-  .text-preset-8-bold {
-    @apply font-barlow-condensed text-base font-bold leading-none tracking-[2.7px];
-    text-indent: -0.1881em;
-    direction: rtl;
-    text-align: justify;
+    @apply font-barlow-condensed text-1;
+    letter-spacing: 0.15em;
+    line-height: auto;
   }
 
   .text-preset-9 {
-    @apply font-barlow text-sm font-normal leading-[180%] tracking-normal sm:text-base md:text-xl;
+    @apply font-barlow text-2;
+    line-height: 180%;
+    letter-spacing: 0px;
+  }
+
+  .text-preset-2-md {
+    @apply font-bellafair text-11;
+  }
+
+  .text-preset-3-md {
+    @apply font-bellafair text-9;
+  }
+
+  .text-preset-4-md {
+    @apply font-bellafair text-6;
+  }
+
+  .text-preset-5-md {
+    @apply font-barlow-condensed text-5;
+    line-height: auto;
+    letter-spacing: 0.15em;
+  }
+
+  .text-preset-9-md {
+    @apply font-barlow text-3;
+    letter-spacing: 0px;
+    line-height: 180%;
+  }
+
+  .text-preset-1-lg {
+    @apply font-bellafair text-13;
+  }
+
+  .text-preset-2-lg {
+    @apply font-bellafair text-12;
+  }
+
+  .text-preset-3-lg {
+    @apply font-bellafair text-10;
+  }
+
+  .text-preset-4-lg {
+    @apply font-bellafair text-8;
+  }
+
+  .text-preset-5-lg {
+    @apply font-barlow-condensed text-7;
+    letter-spacing: 4px;
+  }
+
+  .text-preset-6-lg {
+    @apply font-bellafair text-7;
+  }
+
+  .text-preset-7-lg {
+    @apply font-barlow-condensed text-1;
+    line-height: auto;
+    letter-spacing: 2px;
+  }
+
+  .text-preset-8-lg {
+    @apply font-barlow-condensed text-3;
+    letter-spacing: 2px;
+  }
+
+  .text-preset-8-bold-lg {
+    @apply font-barlow-condensed text-3;
+    font-weight: bold;
+    letter-spacing: 2.7px;
+    line-height: auto;
+  }
+
+  .text-preset-9-lg {
+    @apply font-barlow text-4;
+    letter-spacing: 0px;
+    line-height: 180%;
+  }
+
+  .unset {
+    @apply bottom-unset end-unset left-unset right-unset top-unset m-unset mx-unset my-unset me-unset ms-unset size-unset h-unset max-h-unset min-h-unset w-unset min-w-unset max-w-unset gap-unset p-unset px-unset py-unset opacity-0;
   }
 }
