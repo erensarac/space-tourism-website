@@ -124,9 +124,9 @@ const config: Config = {
         xs: "375px",
       },
       backgroundImage: {
-        "desktop-home": "url('/assets/background-home-desktop.jpg')",
-        "tablet-home": "url('/assets/background-home-tablet.jpg')",
-        "mobile-home": "url('/assets/background-home-mobile.jpg')",
+        "desktop-home": "url('/assets/home/background-home-desktop.jpg')",
+        "tablet-home": "url('/assets/home/background-home-tablet.jpg')",
+        "mobile-home": "url('/assets/home/background-home-mobile.jpg')",
         "desktop-destination":
           "url('/assets/destination/background-destination-desktop.jpg')",
         "tablet-destination":
