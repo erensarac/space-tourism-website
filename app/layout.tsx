@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
+import { ViewTransitions } from 'next-view-transitions'
 
 const bellafair = Bellefair({
   subsets: ["latin"],
@@ -31,12 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${bellafair.variable} ${barlow.variable} ${barlowCondensed.variable} bg-blue-900 text-white min-h-screen overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${bellafair.variable} ${barlow.variable} ${barlowCondensed.variable} bg-blue-900 text-white min-h-screen overflow-x-hidden`}
+        >
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -1,11 +1,12 @@
 "use client";
-import Link from "next/link";
+import { useTransitionRouter } from 'next-view-transitions'
 import { getImageProps } from "next/image";
 import { useSearchParams } from "next/navigation";
 import { technologies } from "@/app/constants";
 import Navbar from "@/components/Navbar";
 
 export default function Technology() {
+  const router = useTransitionRouter();
   const searchParams = useSearchParams();
   const technologyParam = searchParams.get("q");
   const technology = technologyParam
@@ -46,16 +47,12 @@ export default function Technology() {
                     key={technology.order}
                     className={`${technologyParam === technology.name || (!technologyParam && technology.order === 1) ? "bg-white text-blue-900" : "border border-white/25 text-white"} text-preset-4 md:text-preset-4-md xl:text-preset-4-lg flex size-[40px] rounded-full text-center md:size-[56px] xl:size-[80px]`}
                   >
-                    <Link
+                    <button
                       className="flex w-full items-center justify-center"
-                      scroll={false}
-                      href={{
-                        pathname: "/technology",
-                        query: { q: technology.name },
-                      }}
+                      onClick={() => router.push(`./technology?q=${technology.name}`, { scroll:false })}
                     >
                       {technology.order}
-                    </Link>
+                    </button>
                   </li>
                 ))}
               </ul>

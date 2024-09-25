@@ -1,10 +1,10 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from 'next-view-transitions'
 import Navbar from "@/components/Navbar";
 import Button from "@/components/Button";
 
 export default function Home() {
-  const router = useRouter();
+  const router = useTransitionRouter();
 
   return (
     <main className="flex min-h-screen w-full flex-col bg-blue-900 bg-mobile-home bg-cover bg-no-repeat md:bg-tablet-home lg:bg-desktop-home">

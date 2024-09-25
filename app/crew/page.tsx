@@ -1,9 +1,12 @@
-import Link from "next/link";
+"use client"
+
+import { useTransitionRouter } from 'next-view-transitions'
 import Image from "next/image";
 import { members } from "@/app/constants";
 import Navbar from "@/components/Navbar";
 
 export default function Crew({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+  const router = useTransitionRouter();
   const memberParam = searchParams.member;
   const member = memberParam
     ? members.find((member) => member.query === memberParam)!
@@ -36,13 +39,9 @@ export default function Crew({ searchParams }: { searchParams: { [key: string]: 
               <div className="flex w-full xl:pb-6">
                 <div className="mx-auto flex flex-row gap-7 xl:mx-unset">
                   {members.map((member) => (
-                    <Link
+                    <button
                       key={member.order}
-                      scroll={false}
-                      href={{
-                        pathname: "/crew",
-                        query: { member: member.query },
-                      }}
+                      onClick={() => router.push(`./crew?member=${member.query}`, {scroll: false})}
                       className={`${memberParam === member.query || (!memberParam && member.order === 1) ? "bg-white" : "bg-white/15"} size-[10px] rounded-full bg-white lg:size-[15px]`}
                     />
                   ))}
