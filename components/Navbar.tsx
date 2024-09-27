@@ -43,32 +43,34 @@ export default function Navbar() {
               onClick={() => setShowMenu(false)}
             />
           </div>
-          <nav
-            className={`${showMenu ? "flex" : "hidden"} h-10 w-2 flex-col items-start gap-6 md:relative md:flex md:h-unset md:w-unset md:flex-row md:items-center md:gap-8`}
-          >
-            {menuItems.map((item, i: number) => (
-              <Link
-                key={item.slug}
-                href={item.slug}
-                className="flex w-full items-center gap-2 md:w-unset"
-              >
-                <li className="group relative flex w-full items-center gap-2 md:h-5 md:w-unset lg:gap-1">
-                  <span
-                    className={`${i === 0 ? "block md:hidden lg:block" : "block"} text-preset-8-bold-lg text-white`}
-                  >
-                    {prefixNumber(i)}
-                  </span>
-                  <p
-                    className={`${i === 0 ? "md:tracking-[2px]" : ""} text-preset-8-lg uppercase text-white`}
-                  >
-                    {item.text}
-                  </p>
-                  <hr
-                    className={`${pathname === item.slug ? "opacity-100" : "opacity-0 group-hover:opacity-50"} absolute bottom-0 right-0 h-full w-1 border-none bg-white transition-opacity md:left-0 md:h-2 md:w-full`}
-                  />
-                </li>
-              </Link>
-            ))}
+          <nav>
+            <ul
+              className={`${showMenu ? "flex" : "hidden"} h-10 w-2 flex-col items-start gap-6 md:relative md:flex md:h-unset md:w-unset md:flex-row md:items-center md:gap-8`}
+            >
+              {menuItems.map((item, i: number) => (
+                <Link
+                  key={item.slug}
+                  href={item.slug}
+                  className="flex w-full items-center gap-2 md:w-unset"
+                >
+                  <li className="group relative flex w-full items-center gap-2 md:h-5 md:w-unset lg:gap-1">
+                    <span
+                      className={`${i === 0 ? "block md:hidden lg:block" : "block"} text-preset-8-bold-lg text-white`}
+                    >
+                      {prefixNumber(i)}
+                    </span>
+                    <p
+                      className={`${i === 0 ? "md:tracking-[2px]" : ""} text-preset-8-lg uppercase text-white`}
+                    >
+                      {item.text}
+                    </p>
+                    <hr
+                      className={`${pathname === item.slug ? "opacity-100" : "opacity-0 group-hover:opacity-50"} absolute bottom-0 right-0 h-full w-1 border-none bg-white transition-opacity md:left-0 md:h-2 md:w-full`}
+                    />
+                  </li>
+                </Link>
+              ))}
+            </ul>
           </nav>
         </div>
         <div className="flex p-2 md:hidden">
