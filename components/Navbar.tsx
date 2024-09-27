@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 import { useState } from "react";
 
 import Logo from "@/components/Logo";
@@ -16,6 +17,7 @@ const menuItems = [
 ];
 
 export default function Navbar() {
+  const router = useTransitionRouter();
   const pathname: string = usePathname();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -48,12 +50,16 @@ export default function Navbar() {
               className={`${showMenu ? "flex" : "hidden"} h-10 w-2 flex-col items-start gap-6 md:relative md:flex md:h-unset md:w-unset md:flex-row md:items-center md:gap-8`}
             >
               {menuItems.map((item, i: number) => (
-                <Link
+                <li
                   key={item.slug}
-                  href={item.slug}
                   className="flex w-full items-center gap-2 md:w-unset"
                 >
-                  <li className="group relative flex w-full items-center gap-2 md:h-5 md:w-unset lg:gap-1">
+                  <button
+                    className="group relative flex w-full items-center gap-2 md:h-5 md:w-unset lg:gap-1"
+                    onClick={() =>
+                      router.push(`./${item.slug}`, { scroll: true })
+                    }
+                  >
                     <span
                       className={`${i === 0 ? "block md:hidden lg:block" : "block"} text-preset-8-bold-lg text-white`}
                     >
@@ -67,8 +73,8 @@ export default function Navbar() {
                     <hr
                       className={`${pathname === item.slug ? "opacity-100" : "opacity-0 group-hover:opacity-50"} absolute bottom-0 right-0 h-full w-1 border-none bg-white transition-opacity md:left-0 md:h-2 md:w-full`}
                     />
-                  </li>
-                </Link>
+                  </button>
+                </li>
               ))}
             </ul>
           </nav>
