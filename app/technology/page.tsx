@@ -1,14 +1,12 @@
 "use client";
 import { useTransitionRouter } from 'next-view-transitions'
 import { getImageProps } from "next/image";
-import { useSearchParams } from "next/navigation";
 import { technologies } from "@/app/constants";
 import Navbar from "@/components/Navbar";
 
-export default function Technology() {
+export default function Technology({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
   const router = useTransitionRouter();
-  const searchParams = useSearchParams();
-  const technologyParam = searchParams.get("q");
+  const technologyParam = searchParams.q
   const technology = technologyParam
     ? technologies.find((technology) => technology.name === technologyParam)!
     : technologies[0];
